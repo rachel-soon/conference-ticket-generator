@@ -1,9 +1,13 @@
 import "./App.css";
-import Background from "./Background/index";
-import { Box } from "@radix-ui/themes";
-// Notes: maybe you can make the background a component (layout) with children props
+import Background from "./Background/Background";
+import Logo from "./Logo/Logo";
+
 function App() {
-  return <Background>ddjd</Background>;
+  return (
+    <Background>
+      <Logo />
+    </Background>
+  );
 }
 
 export default App;
