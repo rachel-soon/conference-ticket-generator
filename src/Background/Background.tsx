@@ -28,6 +28,7 @@ export default function Background({ children }: BackgroundProps) {
           ...sharedStyle(backgroundImage),
           position: "relative",
           zIndex: "0",
+          userSelect: "none",
         }}
       >
         <Box
@@ -36,18 +37,30 @@ export default function Background({ children }: BackgroundProps) {
             position: "fixed",
             zIndex: "1",
             top: "0",
+            userSelect: "none",
           }}
         />
         <Box>
           <img
             src={squigglyLinesImage}
-            style={{ position: "fixed", bottom: "0", zIndex: "1" }}
+            style={{
+              position: "fixed",
+              bottom: "0",
+              zIndex: "1",
+              userSelect: "none",
+            }}
           />
         </Box>
         <Box>
           <img
             src={squigglyLineTopImage}
-            style={{ position: "fixed", top: "0", right: "0", zIndex: "1" }}
+            style={{
+              position: "fixed",
+              top: "0",
+              right: "0",
+              zIndex: "1",
+              userSelect: "none",
+            }}
           />
         </Box>
         <Box>
@@ -70,6 +83,7 @@ export default function Background({ children }: BackgroundProps) {
             flexDirection: "column",
             placeItems: "center",
             zIndex: "2",
+            userSelect: "none",
           }}
         >
           {children}
