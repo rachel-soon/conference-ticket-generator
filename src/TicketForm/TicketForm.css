@@ -17,7 +17,8 @@ button {
 
 .FormField {
   display: grid;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  position: relative;
 }
 
 .FormLabel {
@@ -31,14 +32,23 @@ button {
   font-size: 13px;
   color: white;
   opacity: 0.8;
+  position: absolute;
+  top: calc(100% + 5px);
+  color: var(--orange-700);
+  display: flex;
+  gap: 3;
+}
+
+.FormMessage svg {
+  margin-right: 4px;
+  margin-top: 2.5px;
 }
 
 .FormControl {
   height: 50px !important;
 }
 
-.Input,
-.Textarea {
+.Input {
   width: 100%;
   display: inline-flex;
   align-items: center;
@@ -62,6 +72,12 @@ button {
   padding: 0 10px;
   height: 35px;
   line-height: 1;
+}
+
+.Input[data-invalid],
+.Input[data-invalid]:focus {
+  border: 1px solid var(--orange-700);
+  box-shadow: none;
 }
 
 .Button {

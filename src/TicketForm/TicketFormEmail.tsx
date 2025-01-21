@@ -1,4 +1,5 @@
 import * as Form from "@radix-ui/react-form";
+import IconInfo from "../UI/Icons/IconInfo";
 
 export default function TicketFormEmail() {
   return (
@@ -11,11 +12,15 @@ export default function TicketFormEmail() {
         }}
       >
         <Form.Label className="FormLabel">Email Address</Form.Label>
+
         <Form.Message className="FormMessage" match="valueMissing">
+          <IconInfo />
           Please enter your email
         </Form.Message>
+
         <Form.Message className="FormMessage" match="typeMismatch">
-          Please provide a valid email
+          <IconInfo />
+          Please enter a valid email
         </Form.Message>
       </div>
 

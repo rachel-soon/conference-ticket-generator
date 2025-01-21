@@ -9,7 +9,7 @@ export default function Header() {
         <Heading size="8" style={{ width: "40vw" }} my="5">
           Your Journey to Coding Conf 2025 Starts Here!
         </Heading>
-        <Text>Secure your spot at next year's biggest coding conference.</Text>
+        <Text>Secure your spot at this year's biggest coding conference.</Text>
       </Container>
     </Section>
   );

@@ -11,18 +11,10 @@ export default function TicketFormGithub() {
         }}
       >
         <Form.Label className="FormLabel">GitHub Username</Form.Label>
-        <Form.Message className="FormMessage" match="valueMissing">
-          Please enter your username
-        </Form.Message>
       </div>
 
       <Form.Control asChild className="FormControl">
-        <input
-          className="Input"
-          type="text"
-          required
-          placeholder="@yourusername"
-        />
+        <input className="Input" type="text" placeholder="@yourusername" />
       </Form.Control>
     </Form.Field>
   );

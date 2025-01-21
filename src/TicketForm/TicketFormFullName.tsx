@@ -11,13 +11,10 @@ export default function TicketFormFullName() {
         }}
       >
         <Form.Label className="FormLabel">Full Name</Form.Label>
-        <Form.Message className="FormMessage" match="valueMissing">
-          Please enter your full name
-        </Form.Message>
       </div>
 
       <Form.Control asChild className="FormControl">
-        <input className="Input" type="text" required />
+        <input className="Input" type="text" />
       </Form.Control>
     </Form.Field>
   );
