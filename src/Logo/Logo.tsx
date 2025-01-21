@@ -3,7 +3,7 @@ import LogoImage from "./assets/logo-full.svg";
 
 export default function Logo() {
   return (
-    <Box>
+    <Box style={{ textAlign: "center" }}>
       <img src={LogoImage} alt="Main logo" />
     </Box>
   );

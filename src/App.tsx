@@ -1,15 +1,12 @@
 import "./App.css";
 import Background from "./Background/Background";
-import Logo from "./Logo/Logo";
+import Header from "./Header/Header";
 import TicketForm from "./TicketForm/TicketForm";
 
 function App() {
   return (
     <Background>
-      <Logo />
-
-      {/* Form */}
-
+      <Header />
       <TicketForm />
     </Background>
   );

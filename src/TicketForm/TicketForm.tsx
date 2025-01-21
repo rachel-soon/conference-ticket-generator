@@ -1,39 +1,22 @@
-import { Box, TextField } from "@radix-ui/themes";
-import { useForm, SubmitHandler } from "react-hook-form";
-
-type Inputs = {
-  example: string;
-  exampleRequired: string;
-};
+import * as Form from "@radix-ui/react-form";
+import "./TicketForm.css";
+import TicketFormEmail from "./TicketFormEmail";
+import TicketFormFullName from "./TicketFormFullName";
+import TicketFormGithub from "./TicketFormGithub";
 
 export default function TicketForm() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<Inputs>();
-
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
-
-  //   console.log(watch("example")); // watch input value by passing the name of it
-
   return (
-    <>
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        style={{ display: "flex", flexDirection: "column", zIndex: "10" }}
-      >
-        <Box maxWidth="500px">
-          <TextField.Root size="3" placeholder="Search the docs…" />
-        </Box>
-        {/* <input defaultValue="test" {...register("example")} /> */}
+    <Form.Root className="FormRoot" style={{ zIndex: "10", marginTop: "20px" }}>
+      <TicketFormFullName />
+      <TicketFormEmail />
+      <TicketFormGithub />
 
-        <input {...register("exampleRequired", { required: true })} />
-
-        {errors.exampleRequired && <span>This field is required</span>}
-
-        <input type="submit" />
-      </form>
-    </>
+      {/* Use asChild prop to allow rendering native/custom HTML elements inside Form.Control */}
+      <Form.Submit asChild>
+        <button className="Button" style={{ marginTop: 20 }}>
+          Generate My Ticket
+        </button>
+      </Form.Submit>
+    </Form.Root>
   );
 }
