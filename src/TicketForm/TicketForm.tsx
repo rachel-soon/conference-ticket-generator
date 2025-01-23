@@ -3,10 +3,12 @@ import "./TicketForm.css";
 import TicketFormEmail from "./TicketFormEmail";
 import TicketFormFullName from "./TicketFormFullName";
 import TicketFormGithub from "./TicketFormGithub";
+import TicketFormAvatar from "./TicketFormAvatar/TicketFormAvatar";
 
 export default function TicketForm() {
   return (
     <Form.Root className="FormRoot" style={{ zIndex: "10", marginTop: "20px" }}>
+      <TicketFormAvatar />
       <TicketFormFullName />
       <TicketFormEmail />
       <TicketFormGithub />

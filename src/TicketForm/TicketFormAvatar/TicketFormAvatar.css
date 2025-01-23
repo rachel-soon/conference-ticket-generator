@@ -1,0 +1,19 @@
+.InputUpload {
+  border: 1px dashed var(--neutral-0);
+  border-radius: 10px;
+  height: 120px !important;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.InputUpload:hover {
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.FormLabel {
+  width: 100%;
+}

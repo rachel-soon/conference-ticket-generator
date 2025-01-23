@@ -26,68 +26,71 @@ export default function Background({ children }: BackgroundProps) {
       <Box
         style={{
           ...sharedStyle(backgroundImage),
-          position: "relative",
+          position: "fixed",
+          top: "0",
           zIndex: "0",
           userSelect: "none",
         }}
-      >
-        <Box
+      />
+
+      <Box
+        style={{
+          ...sharedStyle(linesImage),
+          position: "fixed",
+          zIndex: "1",
+          top: "0",
+          userSelect: "none",
+        }}
+      />
+      <Box>
+        <img
+          src={squigglyLinesImage}
           style={{
-            ...sharedStyle(linesImage),
             position: "fixed",
+            bottom: "0",
             zIndex: "1",
-            top: "0",
             userSelect: "none",
           }}
         />
-        <Box>
-          <img
-            src={squigglyLinesImage}
-            style={{
-              position: "fixed",
-              bottom: "0",
-              zIndex: "1",
-              userSelect: "none",
-            }}
-          />
-        </Box>
-        <Box>
-          <img
-            src={squigglyLineTopImage}
-            style={{
-              position: "fixed",
-              top: "0",
-              right: "0",
-              zIndex: "1",
-              userSelect: "none",
-            }}
-          />
-        </Box>
-        <Box>
-          <img
-            src={circleImage}
-            style={{
-              position: "fixed",
-              top: "-70px",
-              left: "60px",
-              width: "14%",
-              zIndex: "1",
-            }}
-          />
-        </Box>
+      </Box>
 
-        <Box
-          py="8"
+      <Box>
+        <img
+          src={squigglyLineTopImage}
           style={{
-            display: "flex",
-            flexDirection: "column",
-            placeItems: "center",
-            zIndex: "2",
+            position: "fixed",
+            top: "0",
+            right: "0",
+            zIndex: "1",
             userSelect: "none",
           }}
-        >
-          {children}
-        </Box>
+        />
+      </Box>
+
+      <Box>
+        <img
+          src={circleImage}
+          style={{
+            position: "fixed",
+            top: "-70px",
+            left: "60px",
+            width: "14%",
+            zIndex: "1",
+          }}
+        />
+      </Box>
+
+      <Box
+        py="8"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          placeItems: "center",
+          zIndex: "2",
+          userSelect: "none",
+        }}
+      >
+        {children}
       </Box>
     </>
   );
