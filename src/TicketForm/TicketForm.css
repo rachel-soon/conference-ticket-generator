@@ -56,8 +56,11 @@ button {
   border-radius: 10px;
   font-size: 15px;
   color: white;
-  background-color: rgba(70, 90, 126, 0.4);
+  background-color: rgba(70, 90, 126, 0.2 );
   border: 1px solid var(--neutral-500);
+  padding: 0 10px;
+  height: 35px;
+  line-height: 1;
 }
 
 .Input:hover {
@@ -66,12 +69,6 @@ button {
 
 .Input:focus {
   box-shadow: 0 0 0 2px black, 0 0 0 3px white;
-}
-
-.Input {
-  padding: 0 10px;
-  height: 35px;
-  line-height: 1;
 }
 
 .Input[data-invalid],

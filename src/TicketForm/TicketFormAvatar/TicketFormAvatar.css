@@ -1,13 +1,33 @@
 .InputUpload {
-  border: 1px dashed var(--neutral-0);
   border-radius: 10px;
-  height: 120px !important;
+  height: 150px !important;
   margin-bottom: 20px;
   width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 15px;
+  color: white;
+  background-color: rgba(70, 90, 126, 0.3);
+  border: 2px dashed var(--neutral-500);
+  padding: 0 10px;
+  line-height: 1;
 }
 
 .InputUpload:hover {
   cursor: pointer;
+  box-shadow: 0 0 0 1px black;
+}
+
+.Input:focus {
+  box-shadow: 0 0 0 2px black, 0 0 0 3px white;
+}
+
+.Input[data-invalid],
+.Input[data-invalid]:focus {
+  border: 1px solid var(--orange-700);
+  box-shadow: none;
 }
 
 input[type="file"] {
@@ -16,4 +36,26 @@ input[type="file"] {
 
 .FormLabel {
   width: 100%;
+}
+
+.avatar {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.upload {
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  text-align: center;
+}
+
+.uploadIcon {
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  border: 1px solid var(--neutral-500);
+  padding: 0.4rem 0.5rem 0.1rem;
+  border-radius: 10px;
+  background-color: rgba(70, 90, 126, 0.4);
 }
