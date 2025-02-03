@@ -1,8 +1,8 @@
-import * as Form from "@radix-ui/react-form";
 import "./TicketFormAvatar.css";
+import * as Form from "@radix-ui/react-form";
 import { Box } from "@radix-ui/themes";
 import iconUpload from "./assets/icon-upload.svg";
-import IconInfo from "../../UI/Icons/IconInfo";
+import IconInfo from "../../UI/Icon/IconInfo";
 
 export default function TicketFormAvatar() {
   return (

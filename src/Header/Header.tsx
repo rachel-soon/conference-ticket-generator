@@ -10,10 +10,12 @@ export default function Header() {
     >
       <Container size="3" style={{ textAlign: "center" }}>
         <Logo />
-        <Heading size="8" style={{ width: "40vw" }} my="5">
+        <Heading size="9" style={{ width: "55vw" }} my="5">
           Your Journey to Coding Conf 2025 Starts Here!
         </Heading>
-        <Text>Secure your spot at this year's biggest coding conference.</Text>
+        <Text size="6">
+          Secure your spot at this year's biggest coding conference.
+        </Text>
       </Container>
     </Section>
   );
