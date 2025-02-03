@@ -1,4 +1,4 @@
-import "./TicketFormAvatar.css";
+import "./styles.css";
 import * as Form from "@radix-ui/react-form";
 import { Box } from "@radix-ui/themes";
 import iconUpload from "./assets/icon-upload.svg";
@@ -8,13 +8,7 @@ export default function TicketFormAvatar() {
   return (
     <>
       <Form.Field name="avatar" className="avatar">
-        <div
-          style={{
-            display: "flex",
-            alignItems: "baseline",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className="flex justify-between">
           <Form.Label className="FormLabel">
             Upload Avatar
             <Box className="InputUpload"></Box>
@@ -31,21 +25,9 @@ export default function TicketFormAvatar() {
 
         <p className="upload">Drag and drop or click to upload</p>
 
-        <p
-          style={{
-            position: "absolute",
-            bottom: "-30px",
-            display: "flex",
-            alignItems: "center",
-            gap: "5px",
-          }}
-        >
+        <p className="absolute -bottom-[40px] flex items-center gap-3">
           <IconInfo />
-          <span
-            style={{
-              display: "inline-block",
-            }}
-          >
+          <span className="text-[14px]">
             Upload your photo (JPG or PNG, max size: 500KB).
           </span>
         </p>

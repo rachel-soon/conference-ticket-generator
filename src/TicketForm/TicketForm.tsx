@@ -3,7 +3,7 @@ import "./TicketForm.css";
 import TicketFormEmail from "./TicketFormEmail";
 import TicketFormFullName from "./TicketFormFullName";
 import TicketFormGithub from "./TicketFormGithub";
-import TicketFormAvatar from "./TicketFormAvatar/TicketFormAvatar";
+import TicketFormAvatar from "./TicketFormAvatar";
 
 export default function TicketForm() {
   return (

@@ -1,5 +1,5 @@
 import "./App.css";
-import Background from "./Background/Background";
+import Background from "./Background";
 import Header from "./Header/Header";
 import TicketForm from "./TicketForm/TicketForm";
 
