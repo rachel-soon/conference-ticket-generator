@@ -25,7 +25,6 @@ export default function TicketFormAvatar() {
       // validate file type
       const fileType = file.type.split("/")[1];
 
-      console.log(fileType);
       if (!["jpg", "jpeg", "png"].includes(fileType)) {
         setFileTypeError(true);
       } else setFileTypeError(false);
@@ -52,8 +51,10 @@ export default function TicketFormAvatar() {
           <div className="uploadIcon">
             <img src={iconUpload} alt="upload icon" />
           </div>
-
           <p className="upload">Drag and drop or click to upload</p>
+          {/* Image display preview */}
+
+          <div></div>
         </div>
 
         <p
