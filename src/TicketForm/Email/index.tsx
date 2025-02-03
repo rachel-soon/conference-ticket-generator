@@ -15,7 +15,7 @@ export default function TicketFormEmail() {
 
         <Form.Message className="FormMessage" match="valueMissing">
           <IconInfo />
-          Please enter your email
+          Please enter a valid email
         </Form.Message>
 
         <Form.Message className="FormMessage" match="typeMismatch">

@@ -31,7 +31,9 @@
 }
 
 input[type="file"] {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .FormLabel {
