@@ -62,6 +62,7 @@ input[type="file"] {
     text-align: center;
     top: 32%;
     left: 25%;
+    border: 2px solid red;
   }
 
   &__icon {
@@ -69,5 +70,28 @@ input[type="file"] {
     padding: 0.4rem 0.5rem;
     border-radius: 10px;
     background-color: rgba(70, 90, 126, 0.4);
+  }
+
+  &__preview {
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.btn {
+  background-color: rgba(70, 90, 126, 0.2);
+  color: white;
+  font-size: 14px;
+  width: 100px;
+  padding: 0.3rem 0;
+  text-align: center;
+  border-radius: 5px;
+  transition: all ease-in-out 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
 }
