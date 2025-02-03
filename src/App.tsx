@@ -1,7 +1,7 @@
 import "./App.css";
 import Background from "./Background";
-import Header from "./Header/Header";
-import TicketForm from "./TicketForm/TicketForm";
+import Header from "./Header";
+import TicketForm from "./TicketForm";
 
 function App() {
   return (

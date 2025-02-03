@@ -1,9 +1,9 @@
 import * as Form from "@radix-ui/react-form";
-import "./TicketForm.css";
-import TicketFormEmail from "./TicketFormEmail";
-import TicketFormFullName from "./TicketFormFullName";
-import TicketFormGithub from "./TicketFormGithub";
-import TicketFormAvatar from "./TicketFormAvatar";
+import "./style.css";
+import TicketFormEmail from "./Email";
+import TicketFormFullName from "./Name";
+import TicketFormGithub from "./Github";
+import TicketFormAvatar from "./Avatar";
 
 export default function TicketForm() {
   return (

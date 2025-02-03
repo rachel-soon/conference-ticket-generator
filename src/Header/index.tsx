@@ -1,5 +1,5 @@
 import { Heading, Text, Container, Section } from "@radix-ui/themes";
-import Logo from "../Logo/Logo";
+import Logo from "../Logo";
 
 export default function Header() {
   return (
