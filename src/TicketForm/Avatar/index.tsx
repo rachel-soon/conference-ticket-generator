@@ -25,7 +25,15 @@ export default function TicketFormAvatar() {
 
         <p className="upload">Drag and drop or click to upload</p>
 
-        <p className="absolute -bottom-[40px] flex items-center gap-3">
+        <p
+          style={{
+            position: "absolute",
+            bottom: "-45px",
+            display: "flex",
+            alignItems: "center",
+            gap: "5px",
+          }}
+        >
           <IconInfo />
           <span className="text-[14px]">
             Upload your photo (JPG or PNG, max size: 500KB).
