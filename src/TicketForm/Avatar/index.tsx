@@ -4,19 +4,21 @@ import { Box } from "@radix-ui/themes";
 import iconUpload from "./assets/icon-upload.svg";
 import IconInfo from "../../UI/Icon/IconInfo";
 import React, { useState } from "react";
+import { useRef } from "react";
 
 export default function TicketFormAvatar() {
   const [fileSizeExceeded, setFileSizeExceeded] = useState(false);
   const [fileTypeError, setFileTypeError] = useState(false);
-  const [formData, setFormData] = useState<File>();
+  const [formData, setFormData] = useState<File | null>();
+  const fileInput = useRef<HTMLInputElement>(null);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files) {
-      const file = event.target.files[0];
+    const file = event?.target?.files?.[0];
 
+    if (file) {
       // get the size in kb
       // 1 byte = 1024kb
-      const fileSize = Math.floor(event.target.files[0].size / 1024);
+      const fileSize = Math.floor(file.size / 1024);
       const fileType = file.type.split("/")[1];
 
       if (fileSize > 500) {
@@ -27,9 +29,27 @@ export default function TicketFormAvatar() {
         setFileSizeExceeded(false);
         setFileTypeError(false);
         setFormData(file);
+
+        // // generate the image preview
+        // const reader = new FileReader();
+        // if (reader && reader.result) {
+        //   reader.onload = () => setFormData(reader.result as string);
+        //   reader.readAsDataURL(formData);
+        // }
       }
     }
   };
+
+  const handleRemoveImage = () => {
+    setFormData(null);
+    setFileTypeError(false);
+    setFileSizeExceeded(false);
+  };
+
+  const handleChangeImage = () => {
+    fileInput.current?.click();
+  };
+
   return (
     <Form.Field name="avatar" className="avatar">
       <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -40,6 +60,7 @@ export default function TicketFormAvatar() {
 
         <Form.Control asChild className="FormControl">
           <input
+            ref={fileInput}
             type="file"
             className="Input"
             onChange={handleFileChange}
@@ -70,10 +91,18 @@ export default function TicketFormAvatar() {
 
             {/* Action buttons */}
             <div style={{ display: "flex", gap: "15px" }}>
-              <button className="btn btn--remove" type="button">
+              <button
+                className="btn btn--remove"
+                type="button"
+                onClick={handleRemoveImage}
+              >
                 Remove image
               </button>
-              <button className="btn btn--change" type="button">
+              <button
+                className="btn btn--change"
+                type="button"
+                onClick={handleChangeImage}
+              >
                 Change image
               </button>
             </div>
