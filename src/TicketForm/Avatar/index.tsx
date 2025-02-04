@@ -10,6 +10,7 @@ export default function TicketFormAvatar() {
   const [fileSizeExceeded, setFileSizeExceeded] = useState(false);
   const [fileTypeError, setFileTypeError] = useState(false);
   const [formData, setFormData] = useState<File | null>();
+  const [imageSrc, setImageSrc] = useState("");
   const fileInput = useRef<HTMLInputElement>(null);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,12 +31,9 @@ export default function TicketFormAvatar() {
         setFileTypeError(false);
         setFormData(file);
 
-        // // generate the image preview
-        // const reader = new FileReader();
-        // if (reader && reader.result) {
-        //   reader.onload = () => setFormData(reader.result as string);
-        //   reader.readAsDataURL(formData);
-        // }
+        // generate image url
+        const url = URL.createObjectURL(file);
+        setImageSrc(url);
       }
     }
   };
@@ -78,7 +76,7 @@ export default function TicketFormAvatar() {
               }}
             >
               <img
-                src="https://media.istockphoto.com/id/182174009/photo/curious-bunny.jpg?s=1024x1024&w=is&k=20&c=-MZ2Ik6UH0RRmp7Gd4P4rdryVt85juR6WWWAmQ7OhZI="
+                src={imageSrc}
                 style={{
                   objectFit: "cover",
                   height: "70px",
