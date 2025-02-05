@@ -86,8 +86,6 @@ export default function Background({ children }: BackgroundProps) {
           display: "flex",
           flexDirection: "column",
           placeItems: "center",
-          zIndex: "2",
-          userSelect: "none",
         }}
       >
         {children}
