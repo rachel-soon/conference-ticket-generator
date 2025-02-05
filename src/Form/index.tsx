@@ -1,4 +1,4 @@
-import Background from "./Background";
+import Background from "../UI/Background";
 import Header from "./Header";
 import TicketForm from "./TicketForm";
 
