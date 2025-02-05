@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "../Form";
+import Form from "../UI";
 
 import { Router, Route } from "react-router";
 

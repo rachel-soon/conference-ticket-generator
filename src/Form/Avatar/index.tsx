@@ -2,7 +2,7 @@ import "./style.scss";
 import * as Form from "@radix-ui/react-form";
 import { Box } from "@radix-ui/themes";
 import iconUpload from "./assets/icon-upload.svg";
-import IconInfo from "../../../UI/Icon/IconInfo";
+import IconInfo from "../../UI/Icon/IconInfo";
 import React, { useState } from "react";
 import { useRef } from "react";
 
