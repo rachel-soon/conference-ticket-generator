@@ -1,5 +1,5 @@
-import Background from "../UI/Background";
-import Header from "../UI/Header";
+import Background from "../Background";
+import Header from "../Header";
 import { Outlet } from "react-router";
 
 export default function MainLayout() {

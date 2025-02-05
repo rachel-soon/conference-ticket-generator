@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 import Form from "../Form";
-import MainLayout from "../Layout/MainLayout";
+import MainLayout from "../UI/Layout/MainLayout";
 
 export default function AppRoutes() {
   return (
