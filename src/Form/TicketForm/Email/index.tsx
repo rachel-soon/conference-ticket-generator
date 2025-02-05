@@ -1,5 +1,5 @@
 import * as Form from "@radix-ui/react-form";
-import IconInfo from "../../UI/Icon/IconInfo";
+import IconInfo from "../../../UI/Icon/IconInfo";
 
 export default function TicketFormEmail() {
   return (
