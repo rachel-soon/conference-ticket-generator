@@ -14,6 +14,7 @@ export default function AppRoutes() {
         </Route>
 
         {/* Redirect to index */}
+        {/* TODO: implement 404 page */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

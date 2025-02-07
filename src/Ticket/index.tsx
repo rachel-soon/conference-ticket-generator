@@ -1,7 +1,8 @@
 import TicketImg from "./assets/pattern-ticket.svg";
-import logoIcon from "./assets/logo-mark.svg";
-import { Box, Text } from "@radix-ui/themes";
-import { generateRandomId } from "../utils/random";
+import { Box } from "@radix-ui/themes";
+import TicketNumber from "./TicketNumber";
+import TicketLocation from "./TicketLocation";
+import TicketUser from "./TicketUser";
 
 export default function Ticket() {
   return (
@@ -15,6 +16,9 @@ export default function Ticket() {
       >
         <img src={TicketImg} alt="Ticket Image" />
 
+        {/* Ticket id */}
+        <TicketNumber />
+
         {/* Ticket content */}
         <Box
           style={{
@@ -23,40 +27,14 @@ export default function Ticket() {
             width: "100%",
             height: "100%",
             display: "flex",
+            justifyContent: "space-between",
+            flexDirection: "column",
             padding: "1.5rem",
           }}
         >
-          <Box mr="4" mt="3">
-            <img src={logoIcon} alt="Logo" />
-          </Box>
+          <TicketLocation />
 
-          <Box
-            style={{
-              height: "fit-content",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Text weight="bold" style={{ fontSize: "38px" }}>
-              Coding Conf
-            </Text>
-            <Text size="5">Jan 31, 2025 &nbsp;/ &nbsp;Austin, TX</Text>
-          </Box>
-
-          <Text
-            size="7"
-            style={{
-              position: "absolute",
-              display: "block",
-              right: "5px",
-              top: "40%",
-              transform: "rotate(90deg)",
-              color: "var(--neutral-70)",
-              opacity: "0.4",
-            }}
-          >
-            #{generateRandomId()}
-          </Text>
+          <TicketUser />
         </Box>
       </div>
     </>
