@@ -1,7 +1,12 @@
-import AppRoutes from "./AppRoutes.tsx";
+import Routes from "./Routes.tsx";
+import { Fragment } from "react";
 
 function App() {
-  return <AppRoutes />;
+  return (
+    <Fragment>
+      <Routes />
+    </Fragment>
+  );
 }
 
 export default App;
