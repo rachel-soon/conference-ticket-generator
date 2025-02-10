@@ -5,6 +5,9 @@ import { useNavigate } from "react-router";
 import TicketFormAvatar from "./Avatar";
 import IconInfo from "../UI/Icon/IconInfo";
 
+import ticketStore, { incremented } from "../store/ticket";
+import { Button } from "@radix-ui/themes";
+
 export default function TicketForm() {
   const navigate = useNavigate();
 
@@ -42,7 +45,7 @@ export default function TicketForm() {
   // This will only fire when there are no errors on the form
   const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const { full_name, github, avatar, email } = event.target.elements;
+    const { full_name, github, email } = event.target.elements;
 
     console.log("full name", full_name.value);
     console.log("github", github.value);
@@ -59,6 +62,9 @@ export default function TicketForm() {
       style={{ zIndex: "10", marginTop: "20px" }}
       onSubmit={submitForm}
     >
+      <Button onClick={() => ticketStore.dispatch(incremented())}>
+        Click me to test
+      </Button>
       <TicketFormAvatar />
 
       {fields.map((field) => {
