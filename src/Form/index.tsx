@@ -46,9 +46,9 @@ export default function TicketForm() {
 
     console.log("full name", full_name.value);
     console.log("github", github.value);
-    console.log("avatar", avatar.value);
+    // console.log("avatar", avatar.value);
     console.log("email", email.value);
-    // console.log(event.target.elements);
+    console.log(event.target.elements);
 
     navigate("/ticket");
   };

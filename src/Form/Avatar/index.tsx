@@ -34,6 +34,8 @@ export default function TicketFormAvatar() {
         // generate image url
         const url = URL.createObjectURL(file);
         setImageSrc(url);
+
+        // set as global
       }
     }
   };
