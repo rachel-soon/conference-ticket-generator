@@ -33,7 +33,6 @@ export default function Ticket() {
           }}
         >
           <TicketLocation />
-
           <TicketUser />
         </Box>
       </div>

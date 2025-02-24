@@ -1,12 +1,12 @@
 import * as Form from "@radix-ui/react-form";
 import "./style.css";
 import { useNavigate } from "react-router";
+import { setFullName, setEmail, setGithub } from "../store/ticketFormStore";
 
 import TicketFormAvatar from "./Avatar";
 import IconInfo from "../UI/Icon/IconInfo";
 
-import ticketStore, { incremented } from "../store/ticket";
-import { Button } from "@radix-ui/themes";
+// import { Button } from "@radix-ui/themes";
 
 export default function TicketForm() {
   const navigate = useNavigate();
@@ -47,11 +47,11 @@ export default function TicketForm() {
     event.preventDefault();
     const { full_name, github, email } = event.target.elements;
 
-    console.log("full name", full_name.value);
-    console.log("github", github.value);
+    setFullName(full_name.value);
+    setEmail(email.value);
+    setGithub(github.value);
+
     // console.log("avatar", avatar.value);
-    console.log("email", email.value);
-    console.log(event.target.elements);
 
     navigate("/ticket");
   };
@@ -62,9 +62,6 @@ export default function TicketForm() {
       style={{ zIndex: "10", marginTop: "20px" }}
       onSubmit={submitForm}
     >
-      <Button onClick={() => ticketStore.dispatch(incremented())}>
-        Click me to test
-      </Button>
       <TicketFormAvatar />
 
       {fields.map((field) => {

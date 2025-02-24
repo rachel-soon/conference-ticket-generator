@@ -1,8 +1,20 @@
 import { Box, Text } from "@radix-ui/themes";
 import logoIcon from "../assets/logo-mark.svg";
 import logoGithub from "./icon-github.svg";
+import { useTicketFormStore } from "../../store/ticketFormStore";
+import { useEffect } from "react";
+import { useNavigate } from "react-router";
 
 export default function TicketUser() {
+  const { user_name, user_github } = useTicketFormStore();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user_name === "") {
+      navigate("/form");
+    }
+  }, [user_name, navigate]);
+
   return (
     <Box
       style={{
@@ -27,12 +39,15 @@ export default function TicketUser() {
           height: "inherit",
           display: "flex",
           flexDirection: "column",
-          placeItems: "center",
+          placeItems: "start",
         }}
         mt="3"
       >
-        <Text weight="medium" style={{ fontSize: "28px" }}>
-          Jonatan Kristof
+        <Text
+          weight="medium"
+          style={{ fontSize: "28px", textTransform: "capitalize" }}
+        >
+          {user_name}
         </Text>
 
         <Box
@@ -49,7 +64,7 @@ export default function TicketUser() {
               height: "fit-content",
             }}
           />
-          <Text size="5">@jonatankristof0101</Text>
+          <Text size="5">@{user_github}</Text>
         </Box>
       </Box>
     </Box>
